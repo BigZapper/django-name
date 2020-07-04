@@ -21,9 +21,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'de2)j2sfo90%6_x%sqdb+u)+*m5!15$+85by4j^b&0@xaz8jti'
-
+GOOGLE_SECRET_KEY = '6LcO9KcZAAAAAOEqk4Gcv10A0v9xJ18oMz2P3a63'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'tenhay.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
